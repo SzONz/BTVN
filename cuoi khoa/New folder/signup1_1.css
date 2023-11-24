@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.themainform{
+    background-color: var(--formbackground-color);
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 auto;
+    color: var(--text-color);
+    transition-duration: 1s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 50px 10px 50px;
+    max-width: 350px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.15);
+}
+
+.classentername, .classenteremail, .classenterpass, .classpassconfirm {
+    width: 100%;
+    height: 45px;
+}
+
+#email, #password, #passwordconfirm{
+    transition-duration: 1s;
+    border-radius: 5px;
+    color: var(--text-button-color);
+    border: var(--input-border-color) solid 1px;
+    background-color: var(--bg-input-color);
+    width: 100%;
+    height: 30px;
+    font-size: 15px;
+}
+
+#firstname, #lastname {
+    transition-duration: 1s;
+    border-radius: 5px;
+    color: var(--text-button-color);
+    border: var(--input-border-color) solid 1px;
+    background-color: var(--bg-input-color);
+    height: 30px;
+    font-size: 15px;
+    width: 153px;
+}
+
+.classentername{
+    display: flex;
+    justify-content: space-between;
+}
+
+.themainform h2{
+    text-align: center;
+}
+
+body{
+    transition-duration: 1s;
+    height: 100vh;
+    width: 100%;
+    background-image: var(--gradient-background);
+}
+
+body h1,h3,a{
+    color: var(--text-color);
+    transition-duration: 1s;
+}
+
+.modetoggle {
+    text-align: end;
+}
+
+.darkmode img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.darkmode {
+    position: relative;
+    right: 30px;
+    cursor: pointer;
+    transition-duration: 1s;
+    width: 35px;
+    height: 35px;
+}
+
+.darkmode:hover{
+    background-color: rgba(202, 223, 242, 0.908);
+    transform: translateY(-2.5px);
+}
+
+:root{
+    --text-color:rgb(0 ,0, 0);
+    --formbackground-color:rgb(255, 255, 255);
+    --text-button-color: rgb(0 ,0, 0);
+    --bg-input-color: rgb(255, 255, 255);
+    --input-border-color: rgb(0 ,0, 0);
+    --placeholder-color: rgb(122, 122, 122);
+    --gradient-background: linear-gradient(to bottom right, rgb(253, 200, 40), rgb(255, 254, 191), rgb(255, 255, 255));
+}
+
+.dark-theme-toggle{
+    --text-color:rgb(255, 253, 210);
+    --formbackground-color:rgb(111, 111, 111);
+    --text-button-color: rgb(255, 253, 210);
+    --bg-input-color: rgb(156, 156, 156);
+    --input-border-color: rgb(255, 253, 210);
+    --placeholder-color: rgb(230, 230, 230);
+    --gradient-background: linear-gradient(to bottom right, rgb(179, 175, 60), rgb(118, 111, 75), rgb(53, 52, 43));
+}
+
+.additional_features {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 60px 140px;
+    text-align: center;
+    position: relative;
+    top: 465px;
+    transition-duration: 1s;
+}
+
+.submitbutton{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.inputbuttontext {
+    transition-duration: 1s;
+    color: var(--text-button-color);
+    background-color: var(--bg-input-color);
+    border-radius: 5px;
+    border: 2px var(--input-border-color) solid;
+    width: 100%;
+    height: 45px;
+    font-size: 15px;
+}
+
+.inputbuttontext:hover{
+    transition-duration: 0.5s;
+    letter-spacing: 1px;
+    background-color: rgb(186, 186, 186);
+}
+
+::placeholder{
+    color: var(--placeholder-color);
+    transition-duration: 1s;
+}
+
+.facebook{
+    background-color: rgb(1, 101, 225);
+    border-radius: 5px;
+}
+
+.twitter{
+    background-color: rgb(3, 179, 255);
+    border-radius: 5px;
+}
+
+.email{
+    background-color: rgb(255, 0, 0);
+    border-radius: 5px;
+}
+
+.facebook:hover{
+    transition-duration: 1s;
+    transform: translateY(-2.5px);
+    background-color:rgb(0, 74, 164);
+}
+
+.twitter:hover{
+    transition-duration: 1s;
+    transform: translateY(-2.5px);
+    background-color:rgb(0, 153, 219);
+}
+
+.email:hover{
+    transition-duration: 1s;
+    transform: translateY(-2.5px);
+    background-color:rgb(213, 40, 40);
+}
+
+.facebook a{
+    display: block;
+    height: 35px;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 15px 0 15px 0;
+    color: white;
+    border-radius: 3px;
+    padding-left: 20px;
+    line-height: 35px;
+}
+
+.twitter a{
+    display: block;
+    height: 35px;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 15px 0 15px 0;
+    color: white;
+    border-radius: 3px;
+    padding-left: 20px;
+    line-height: 35px;
+}
+
+.email a{
+    display: block;
+    height: 35px;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 15px 0 15px 0;
+    color: white;
+    border-radius: 3px;
+    padding-left: 20px;
+    line-height: 35px;
+}

@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
+}
+
+.parallax-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-image: url('image/MainPicture.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(0);
+    position: relative; 
+    transition: background-position 0.1s ease-out;
+}
+
+.header {
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+.header a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    padding: 0.8rem 20px;
+    user-select: none;
+    font-weight: 400;
+    transition: color 1s ease, border-bottom 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.header a:hover {
+    border-bottom: 3px solid #c8a97e;
+    color: #c8a97e;
+}
+
+.contactform{
+    background-color: white;
+    margin: 10px 300px;
+    position: absolute;
+    height: 500px;
+    width: 810px;
+    display: flex;
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 1); 
+    border-radius: 1vw;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+.contactform-left{
+    height: 490px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.contactform-left img{
+    width: 400px;
+    border-right: 1px solid gray    ;
+}
+
+.contactform-right{
+    width: 400px;
+}
+
+.contactform-right{
+    font-family: "Poppins", Arial, sans-serif;
+    padding: 10px;
+}
+
+.contactform-right .form-control,
+.contactform-right h1{
+    margin: 5px 10px;
+    width: 300px;
+    max-width: 400px;
+}
+
+.contactform-right input{
+    height: 35px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contactform-right textarea{
+    height: 140px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contactform-right .button{
+    width: 300px;
+    height: 50px;
+    margin: 10px 20px;
+    background-color: #c8a97e;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+
+.contactform-right .button.pressed {
+    background-color: white;
+    border: 3px solid #c8a97e;
+    color: #c8a97e;
+}
+
+.footer{
+    background-color: black;
+    width: 100r;
+    height: 220px;
+}
+
+.logoFooter{
+    width: 400px;
+    height: 190px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    position: absolute;
+    border-right: 3px solid rgba(128, 128, 128, 0.3);
+    transition: transform 0.3s ease;
+    }
+    
+    .logoNotColored {
+        font-family: 'Dancing Script', cursive;
+        color: white;
+    }
+
+    .logoColored{
+        color: gold;
+        font-family: 'Dancing Script', cursive; 
+    }
+
+
+
+.contactFooter{
+    width: 400px;
+    height: 190px;
+    border-right: 3px solid rgba(128, 128, 128, 0.3);
+    position: absolute;
+    margin: 15px;
+    margin-left: 420px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", Arial, sans-serif;
+    transition: transform 0.3s ease;
+    }
+
+    .contactFooter h3{
+        padding: 5px 10px;
+        color: white;
+    }
+
+    .contactItem{
+        width: 400px;
+        height: 40px;
+        display: flex;
+        padding-left: 10px;
+        align-items: center;
+        margin: 5px;
+    }
+
+    .contactItem img{
+        width: 40px;
+        height: 40px;
+        padding-right: 10px;
+    }
+
+    .contactItem a{
+        color: rgba(128, 128, 128, 0.5);
+        text-decoration: none;
+        position: relative;
+    }
+
+    .contactItem a::before,
+    .contactItem a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 1px;
+        background-color: rgba(128, 128, 128, 0.6);
+        transition: width 0.3s ease;
+    }
+    
+    .contactItem a::before {
+        transform: translateX(-50%);
+    }
+    
+    .contactItem a::after {
+        transform: translateX(-50%);
+    }
+    
+    .contactItem a:hover::before,
+    .contactItem a:hover::after {
+        width: 100%;
+    }
+    
+    .contactItem a:hover {
+        text-decoration: none;
+    }
+
+.aboutFooter{
+    position: absolute;
+    margin: 15px;
+    margin-left: 830px;
+    width: 370px;
+    height: 180px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+    }
+    
+    .aboutFooter h3{
+        color: white;
+        font-family: "Poppins", Arial, sans-serif;
+    }
+
+    .aboutFooter p{
+        color: rgba(128, 128, 128, 0.5);
+        font-family: "Poppins", Arial, sans-serif;
+}
+

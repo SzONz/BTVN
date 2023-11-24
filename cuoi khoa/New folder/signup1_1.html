@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="signup1_1.css">
+    <link rel="icon" href="/images/Dummyimg1.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/42960d7d2c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="titleforpage">
+        <h1 style="text-align: center; margin-bottom: 15px; font-family: Inter; padding-top: 15px;">Food Fanatic</h1>
+    <h3 style="font-style: italic; text-align: center; font-family: Inter">A collection of recipe</h3>
+    </div>
+    
+    <div class="modetoggle">
+        <button class="darkmode" onclick="darkthemetoggle()"><img src="image/icon.jpg" alt="" title="enable/disable dark mode"></button>
+    </div>
+    
+    <div class="themainform">
+        <h2 style="font-size: 34px;">Sign up</h2>
+        <br>
+        <form>
+            <div class="classentername">
+                <input type="text" name="" id="firstname" style="text-align: center;" placeholder="First name">
+                <input type="text" name="" id="lastname" style="text-align: center;" placeholder="Last name"> 
+            </div>
+            <div class="classenteremail">
+                <input type="text" name="" id="email" style="text-align: center;" placeholder="Email address">
+            </div>
+            <div class="classenterpass">
+                <input type="password" name="" id="password" style="text-align: center;" placeholder="Password">
+            </div>
+            <div class="classpassconfirm">
+                <input type="password" name="" id="passwordconfirm" style="text-align: center;" placeholder="Confirm your password">
+            </div>
+            <br>
+            <div class="submitbutton">
+                <input type="button" onclick="buttonclick()" style="font-size: 125%" value="Sign up" class="inputbuttontext">
+            </div>
+            <div class="loginredirect" style="font-size: 20px;">
+                <p style="display: inline;">Already have an account? Log in</p> <a href="http://127.0.0.1:5500/login1_1.html">here</a>
+            </div>
+            
+        </form>
+        <div class="facebook">
+            <a href="#"><i class="fa-brands fa-facebook"></i>Sign up with Facebook</a>
+        </div>
+        <div class="twitter">
+            <a href="#"><i class="fa-brands fa-twitter"></i>Sign up with Twitter</a>
+        </div>
+        <div class="email">
+            <a href="#"><i class="fa-solid fa-envelope"></i>Sign up with Email</a>
+        </div>
+    </div>
+    <div class="additional_features">
+        <a href="" onclick="unavailable()" style="zoom: 1.3;">About Us</a>
+        <a href="http://127.0.0.1:5500/Termsofuse_1.html" style="zoom: 1.3;" target="_blank">Terms of Use</a>
+        <a href="" onclick="unavailable()" style="zoom: 1.3;">Our Policy</a>
+    </div>
+
+    <script src="signup1.js"></script>
+</body>
+</html>

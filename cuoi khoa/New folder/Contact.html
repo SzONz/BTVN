@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Godamn Ramsay</title>
+    <link rel="stylesheet" href="styleContact.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <link rel="icon" href="image/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <section class="parallax-container">
+        <div class="overlay">
+            <div class="header">
+                <a href="http://127.0.0.1:5500/Home.html">Home</a>
+                <a href="http://127.0.0.1:5500/Menu.html">Recipe</a>
+                <a href="http://127.0.0.1:5500/About.html">About</a>
+            </div>
+            <div class="contactform">
+                <div class="contactform-left">
+                    <img src="image/gmail.PNG" alt="">
+                </div>
+                <div class="contactform-right">
+                    <h1>Contact Us</h1>
+                    <form id="contactForm">
+                        <input type="text" placeholder="Your Name" id="name" class="form-control">
+                        <br>
+                        <input type="text" placeholder="Your Email" id="email" class="form-control">
+                        <br>
+                        <textarea name="" id="message" cols="30" rows="10" class="form-control" placeholder="Your Message"></textarea>
+                        <br>
+                        <input type="button" class="button" value="Send Message" onclick="resetAndAnimateButton(this, 'contactForm')"></input>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>  
+
+
+
+    <section class="footer">
+        <div class="logoFooter"><b class="logoColored">Culinary Secrets</b><b class= "logoNotColored">Club</b></div>
+        <div class="contactFooter">
+            <h3>Contact us</h3>
+            <div class="contactItem">
+                <img src="image/facebook logo.png" alt="facebooklogo">
+                <a href="https://www.facebook.com" target="_blank">
+                    <p>Facebook</p>
+                </a>
+            </div>
+
+            <div class="contactItem">
+                <img src="image/discord logo.png" alt="discordlogo">
+                <a href="https://discord.com" target="_blank">
+                    <p>Discord</p>
+                </a>
+            </div>
+
+            <div class="contactItem">
+                <img src="image/instagram logo.png" alt="instagramlogo">
+                <a href="https://www.instagram.com/" target="_blank">
+                    <p>Instagram</p>
+                </a>
+            </div>
+        </div>
+        <div class="aboutFooter">
+            <h3>About us</h3>
+            <p>We're here to reveal the culinary wonders you can create with the ingredients in your kitchen.</p>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <script src="scriptContact.js"></script>
+</body>
+</html>

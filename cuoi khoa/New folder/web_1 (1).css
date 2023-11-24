@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
+}
+
+.parallax-container {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-image: url('image/eggRibbons.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(0);
+    position: relative; 
+}
+
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; 
+    z-index: 1; 
+    font-family: "Poppins", Arial, sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+}
+
+.header {
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+.header a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    padding: 0.8rem 20px;
+    user-select: none;
+    font-weight: 400;
+    transition: color 1s ease, border-bottom 1s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.header a:hover {
+    border-bottom: 3px solid #c8a97e;
+    color: #c8a97e;
+
+
+}
+
+.box{
+    padding: 0 20px;
+}
+img{
+    padding: 0 50px;
+    width: 92%;
+    object-fit: contain;
+   
+}
+
+.footer{
+    background-color: black;
+    width: 100%;
+    height: 220px;
+}
+
+.logoFooter{
+    width: 400px;
+    height: 190px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    position: absolute;
+    border-right: 3px solid rgba(128, 128, 128, 0.3);
+    }
+    
+    .logoNotColored {
+        font-family: 'Dancing Script', cursive;
+        color: white;
+    }
+
+    .logoColored{
+        color: gold;
+        font-family: 'Dancing Script', cursive; 
+    }
+
+
+            
+.contactFooter{
+    width: 400px;
+    height: 190px;
+    border-right: 3px solid rgba(128, 128, 128, 0.3);
+    position: absolute;
+    margin: 15px;
+    margin-left: 420px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", Arial, sans-serif;
+    }
+
+    .contactFooter h3{
+        padding: 5px 10px;
+        color: white;
+    }
+
+    .contactItem{
+        width: 400px;
+        height: 40px;
+        display: flex;
+        padding-left: 10px;
+        align-items: center;
+        margin: 5px;
+    }
+
+    .contactItem img{
+        width: 40px;
+        height: 40px;
+        padding-right: 10px;
+    }
+
+    .contactItem a{
+        color: rgba(128, 128, 128, 0.5);
+        text-decoration: none;
+        position: relative;
+    }
+
+    .contactItem a::before,
+    .contactItem a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 1px;
+        background-color: rgba(128, 128, 128, 0.6);
+        transition: width 0.3s ease;
+    }
+    
+    .contactItem a::before {
+        transform: translateX(-50%);
+    }
+    
+    .contactItem a::after {
+        transform: translateX(-50%);
+    }
+    
+    .contactItem a:hover::before,
+    .contactItem a:hover::after {
+        width: 100%;
+    }
+    
+    .contactItem a:hover {
+        text-decoration: none;
+    }
+
+.aboutFooter{
+    position: absolute;
+    margin: 15px;
+    margin-left: 830px;
+    width: 370px;
+    height: 180px;
+    padding: 10px;
+    }
+    
+    .aboutFooter h3{
+        color: white;
+        font-family: "Poppins", Arial, sans-serif;
+    }
+
+    .aboutFooter p{
+        color: rgba(128, 128, 128, 0.5);
+        font-family: "Poppins", Arial, sans-serif;
+}
+
+
