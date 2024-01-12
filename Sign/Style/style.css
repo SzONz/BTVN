@@ -1,0 +1,23 @@
+.container{
+    width: 300px;
+    height: 500px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 50px auto;
+    padding: 50px;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    font-family: 'Poppins', sans-serif;
+}
+input{
+    height: 50px;
+    padding: 5px;
+    margin-top: 30px;
+}
