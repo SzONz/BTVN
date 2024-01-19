@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: background-color 0.5s ease;
+    display: flex;
+}
+.navbar:hover{
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.button{
+    width: 100px;
+    height: 45px;
+    margin-left: 30px;
+    line-height: 50px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    border: none;
+    background-color: transparent;
+    transition: background-color 0.5s ease, border-bottom 0.5s ease;
+    border-bottom: 3px solid transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.navbar:hover .button{
+    color: white;
+}
+.navbar .button:hover{
+    border-bottom: 3px solid #D2B48C ;
+    color: #D2B48C ;
+}
+
+#Login{
+    margin-left: auto;
+}
+#Sign-in{
+    width: 150px;
+    height: auto;
+    line-height: 50px;
+    background-color: rgba(210, 180, 140, 0.4);
+}
+.navbar:hover #Sign-in{
+    background-color: #D2B48C;
+    color: white;
+    border-bottom: none;
+}
+
+
+
+.footer{
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+}
+
+.footer p,ul{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+.footer h4{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.footerItem{
+    height: auto;
+    font-size: 18px;
+}
+
+.footer li{
+    margin-left: 20px;
+}
