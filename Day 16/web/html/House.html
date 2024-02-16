@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/web/style/navfootStyle.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins&display=swap');
+        </style>
+    <script src="https://kit.fontawesome.com/10d2bd830d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/web/style/SigninLoginStyle.css">
+    <link rel="stylesheet" href="/web/style/house.css">
+</head>
+<body>
+<div class="overlay"></div>
+
+<nav>
+    <div class="navbar">
+        <a href="/web/html/Home.html" class="button"><button>Home</button></a>
+        <a href="/web/html/House.html" class="button"><button>Rent</button></a>
+        <a href="/web/html/Wishlist.html" class="button"><button>Wishlist</button></a>
+        <button class="account"><div class="navIcon"><i class="fa-regular fa-user"></i></div><div class="navText"></div>
+            <div class="accountDrop">
+                <div class="accountPP">
+                    <div class="accountIMG"><i class="fa-regular fa-user"></i></div>
+                    <h5 class="accountDropText"></h5>
+                </div>
+                <div class="accountContainer">
+                    <form action="">
+                        <input type="button" value="My Profile">
+                        <input type="button" value="Settings">
+                        <input type="button" value="Log Out" id="logoutButton">
+                    </form>
+                </div>
+            </div>
+        </button>
+        <button class="button" id="loginButton">Login</button>
+        <button class="button" id="signinButton">Sign in</button>
+    </div>
+</nav>
+
+<div class="popupLogin" id="login">
+    <div class="closeButton">&times;</div>
+    <div class="form">
+        <h2>Login</h2>
+        <form action="">
+            <div class="formItem">
+                <input type="text" id="emailLogin" placeholder="Email">
+                <p id="emailWarningLogin">Please enter a valid email</p>
+            </div>
+            <div class="formItem">
+                <input type="password" id="passwordLogin" placeholder="Password">
+                <p id="passwordWarningLogin">Password incorrect</p>
+            </div>
+            <div class="formItem">
+                <input type="checkbox">
+                <label for="remember-me">Remember me</label>
+            </div>
+            <div class="formItem">
+                <input type="submit" value="Login">
+            </div>
+            <div class="formItem">
+                <a href="">Forgot password?</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="popupSignin" id="register">
+    <div class="closeButton">&times;</div>
+    <div class="form">
+        <h2>Sign in</h2>
+        <form action="">
+            <div class="formItem">
+                <input type="text" id="nameSignin" placeholder="Username">
+                <p id="nameWarningSigning">Please enter your name</p>
+            </div>
+            <div class="formItem">
+                <input type="text" id="emailSignin" placeholder="Email">
+                <p id="emailWarningSigning">Please enter a valid email</p>
+            </div>
+            <div class="formItem">
+                <input type="text" id="numberSignin" placeholder="Phone Number">
+                <p id="phoneWarningSigning">Please enter your phone number</p>
+            </div>
+            <div class="formItem">
+                <input type="password" id="passwordSignin" placeholder="Password">
+                <p id="passwordWarningSigning">Please enter a valid password</p>
+            </div>
+            <div class="formItem">
+                <input type="checkbox" id="TOSScheck">
+                <label for="TOSS">I accept the<a href="/web/html/TOS.html">Term of Use</a></label>
+                <p id="tosWarningSigning">You must accept the Terms of Use</p>
+            </div>
+            <div class="formItem">
+                <input type="submit" value="Signin">
+            </div>
+        </form>
+        <div class="formItem">
+            <a href="">Forgot password?</a>
+        </div>
+    </div>
+</div>
+
+<section>
+    <div class="homeIMG">
+        <img src="/web/img/background2.jpg" alt="">
+        <div class="overlayIMG">
+            <div class="content">
+                <h1>Searching for a home?</h1>
+            </div>
+<section class="searchSection">
+    <div class="search">
+        <div class="address">
+            <div class="addressIcon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="addressSearch">
+                <form action="">
+                    <input type="text" placeholder="Location">
+                </form>
+            </div>
+        </div>
+        <div class="rentTime">  
+            <div class="rentTimeIcon"><i class="fa-solid fa-calendar-days"></i></div>
+            <div class="rentTimeText">Anytime</div>
+        </div>
+        <div class="filter">
+            <div class="filterIcon"><i class="fa-solid fa-bars"></i></div>
+            <div class="filterText">Filter</div>
+        </div>
+    </div>
+    <div class="filterPopup">
+        <div class="filterCloseButton">&times;</div>
+        <div class="guests-and-rooms">
+            <div class="filterTitle">
+                <h3>Guests and Rooms</h3>
+            </div>
+            <div class="GARfilter">
+                <div class="GARitem">
+                    <div class="GARIcon"><i class="fa-solid fa-user"></i></div>
+                    <div class="GARText">
+                        <h4>Adults</h4>
+                        <p>Age 18 or above</p> 
+                    </div>
+                    <div class="Add">
+                        <i class="fa-solid fa-minus" id="minusAdults"></i>
+                        <p id="countAdults">0</p>
+                        <i class="fa-solid fa-plus" id="plusAdults"></i>
+                    </div>
+                </div>
+                <div class="GARitem">
+                    <div class="GARIcon"><i class="fa-solid fa-bath"></i></div>
+                    <div class="GARText">
+                        <h4>Bathrooms</h4>
+                        <p>sleep</p>
+                    </div>
+                    <div class="Add">
+                        <i class="fa-solid fa-minus" id="minusBathrooms"></i>
+                        <p id="countBathrooms">0</p>
+                        <i class="fa-solid fa-plus" id="plusBathrooms"></i>
+                    </div>
+                </div>
+                <div class="GARitem">
+                    <div class="GARIcon"><i class="fa-solid fa-child"></i></div>
+                    <div class="GARText">
+                        <h4>Children</h4>
+                        <p>Age 0-17</p> 
+                    </div>
+                    <div class="Add">
+                        <i class="fa-solid fa-minus" id="minusChildren"></i>
+                        <p id="countChildren">0</p>
+                        <i class="fa-solid fa-plus" id="plusChildren"></i>
+                    </div>
+                </div>
+                <div class="GARitem">
+                    <div class="GARIcon"><i class="fa-solid fa-bed"></i></div>
+                    <div class="GARText">
+                        <h4>Bedrooms</h4>
+                        <p>you know</p>
+                    </div>
+                    <div class="Add">
+                        <i class="fa-solid fa-minus" id="minusBedrooms"></i>
+                        <p id="countBedrooms">0</p>
+                        <i class="fa-solid fa-plus" id="plusBedrooms"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rattings">
+            <div class="filterTitle">
+                <h3>Rattings</h3>
+            </div>
+            <form action="">
+                <label class="container">4.5+
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                    </label>
+                    <label class="container">4+
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Any
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                    </label>
+            </form>
+        </div>
+    </div>
+        </div>
+    </div>
+
+</section>
+
+<section>
+    <div class="category">
+        <h3>Homes that fit your lifestyle</h3>
+        <div class="itemContainer1">
+            <div class="item">
+                <img src="/web/img/life1.jpg" alt="">
+                <div class="itemText">
+                    <p>I am a Student</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="/web/img/life2.jpg" alt="">
+                <div class="itemText">
+                    <p>I am a Digital nomads</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="/web/img/life3.jpg" alt="">
+                <div class="itemText">
+                    <p>I am a Professional</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="/web/img/life4.jpg" alt="">
+                <div class="itemText">
+                    <p>I have a Family</p>
+                </div>
+            </div>
+        </div>
+        <h3>Find place with all the comforts of home</h3>
+        <div class="itemContainer4">
+            <div class="item">
+                <img src="//cdn.hometogo.net/assets/media/pics/224_152/611ac26ea652d.jpg" alt="">
+                <div class="content">
+                    <p>Pet-friendly</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="//cdn.hometogo.net/assets/media/pics/224_152/611a924d4b86a.jpg" alt="">
+                <div class="content">
+                    <p>Pool</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="//cdn.hometogo.net/assets/media/pics/224_152/6118de4c4d107.jpg" alt="">
+                <div class="content">
+                    <p>Wifi</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="//cdn.hometogo.net/assets/media/pics/224_152/611b675869d17.jpg" alt="">
+                <div class="content">
+                    <p>Air conditioning</p>
+                </div>
+            </div>
+        </div>
+        <h3>Popular type of house</h3>
+        <div class="itemContainer2">
+            <div class="item">
+                <img src="/web/img/house1.jpeg" alt="">
+                <div class="itemText">
+                    <p>Detached House</p>
+            </div>
+            </div>
+            <div class="item">
+                <img src="/web/img/house2.jpg" alt="">
+                <div class="itemText">
+                    <p>Apartment</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="/web/img/house3.jpg" alt="">
+                <div class="itemText">
+                    <p>Townhouse</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="/web/img/house4.jpeg" alt="">
+                <div class="itemText">
+                    <p>Condominium</p>
+                </div>
+            </div>
+        </div>
+        <h3>Explore our popular destinations</h3>
+        <div class="itemContainer3">
+            <div class="item" id="sweden">
+                <img src="/web/img/sweden.avif" alt="">
+                <div class="content">
+                    <h4>Sweden</h4>
+                </div>
+            </div>
+            <div class="item" id="spain">
+                <img src="/web/img/spain.jpg" alt="">
+                <div class="content">
+                    <h4>Spain</h4>
+                </div>
+            </div>
+            <div class="item" id="netherlands">
+                <img src="/web/img/netherlands.jpg" alt="">
+                <div class="content">
+                    <h4>Netherlands</h4>
+                </div>
+            </div>
+            <div class="item" id="switzerland">
+                <img src="/web/img/switzerland.jpg" alt="">
+                <div class="content">
+                    <h4>Switzerland</h4>
+                </div>
+            </div>
+            <div class="item" id="croatia">
+                <img src="/web/img/croatia.jpg" alt="">
+                <div class="content">
+                    <h4>Croatia</h4>
+                </div>
+            </div>
+            <div class="item" id="argentina">
+                <img src="/web/img/argentina.webp" alt="">
+                <div class="content">
+                    <h4>Argentina</h4>
+                </div>
+            </div>
+        </div>
+        <div class="help">
+            <div class="helpText">
+                <h3>Need assistance or have questions?</h3>
+                <p>Experience exceptional support from our dedicated customer service team, ready to assist you with anything you need!</p>
+                <button>Get in touch</button>
+            </div>
+            <div class="helpIMG">
+                <img src="/web/img/help.webp" alt="">
+            </div>
+        </div>
+        <div class="provider-list">
+            <h3>Find the best house from around the world</h3>
+            <div class="list">
+                <div class="listItem">
+                    <svg class="h40 w40" width="40" height="40" viewBox="0 0 40 40">
+                        <path d="M30 39.25a.852.852 0 0 1-.584-.232C29.028 38.652 20 29.984 20 24.85c0-2.546 1.054-4.988 2.93-6.788 1.875-1.8 4.418-2.812 7.07-2.812 2.653 0 5.197 1.011 7.072 2.812C38.946 19.862 40 22.304 40 24.85c0 5.134-9.029 13.802-9.417 14.168a.852.852 0 0 1-.583.232Zm0-22.4c-2.21.002-4.328.846-5.89 2.346-1.563 1.5-2.442 3.533-2.444 5.654 0 3.446 5.554 9.69 8.334 12.46 2.779-2.77 8.333-9.014 8.333-12.46-.002-2.121-.881-4.155-2.443-5.654-1.563-1.5-3.681-2.344-5.89-2.346Z"></path>
+                        <path d="M30 29.5a5.19 5.19 0 0 1-2.779-.8 4.811 4.811 0 0 1-1.841-2.132 4.53 4.53 0 0 1-.285-2.745 4.682 4.682 0 0 1 1.369-2.432 5.087 5.087 0 0 1 2.56-1.3 5.245 5.245 0 0 1 2.889.27c.914.36 1.695.969 2.244 1.75.55.781.843 1.7.843 2.639a4.637 4.637 0 0 1-1.466 3.357A5.142 5.142 0 0 1 30 29.5Zm0-7.917a3.46 3.46 0 0 0-1.852.534 3.208 3.208 0 0 0-1.228 1.421 3.02 3.02 0 0 0-.19 1.83c.129.614.446 1.178.912 1.621.467.443 1.06.745 1.707.867s1.317.06 1.926-.18c.61-.24 1.13-.646 1.496-1.167.367-.52.562-1.133.562-1.759 0-.84-.351-1.645-.976-2.24A3.425 3.425 0 0 0 30 21.584Zm-19.585-3.375H.831v-1.583h9.584c.332 0 .65-.125.884-.348.235-.223.366-.525.366-.84 0-.734.308-1.44.855-1.959a2.996 2.996 0 0 1 2.062-.812H21v1.584h-6.418c-.332 0-.65.125-.884.348a1.158 1.158 0 0 0-.366.84c0 .734-.307 1.439-.854 1.959a2.997 2.997 0 0 1-2.063.811Z"></path>
+                        <path d="M22.082 14.25h-1.25v-1.583h1.25c.332 0 .65-.125.884-.348.235-.223.366-.525.366-.84 0-.315-.131-.617-.366-.84a1.284 1.284 0 0 0-.884-.347H18.75a2.997 2.997 0 0 1-2.063-.812 2.702 2.702 0 0 1-.854-1.96 1.16 1.16 0 0 0-.366-.839 1.284 1.284 0 0 0-.884-.348h-8.75V4.75h8.75c.774 0 1.515.292 2.063.812.547.52.854 1.224.854 1.959 0 .315.132.617.366.84.234.222.552.347.884.347h3.333c.774 0 1.516.292 2.063.812.547.52.854 1.224.854 1.96a2.7 2.7 0 0 1-.854 1.958 2.996 2.996 0 0 1-2.063.812Zm-9.583 19h-1.667v-2.77c0-.736.307-1.44.854-1.96a2.997 2.997 0 0 1 2.063-.812c.331 0 .65-.125.884-.348.234-.222.366-.524.366-.84a1.16 1.16 0 0 0-.366-.839 1.284 1.284 0 0 0-.884-.348H6.665V23.75h7.084c.773 0 1.515.292 2.062.812.547.52.855 1.224.855 1.959 0 .735-.308 1.44-.855 1.96a2.996 2.996 0 0 1-2.062.81c-.332 0-.65.126-.884.349a1.158 1.158 0 0 0-.366.84v2.77Z"></path>
+                        <path d="M7.5 23.75H2.498v1.583H7.5V23.75Z"></path>
+                        <path d="M18.164 36a18.29 18.29 0 0 1-9.727-2.8 18.054 18.054 0 0 1-6.703-7.525 17.854 17.854 0 0 1-1.593-9.912 17.918 17.918 0 0 1 4.01-9.216A18.173 18.173 0 0 1 12.52.891 18.327 18.327 0 0 1 22.644.555a18.202 18.202 0 0 1 8.731 5.088 17.951 17.951 0 0 1 4.447 8.12.797.797 0 0 1-.637.965.86.86 0 0 1-.985-.647 16.314 16.314 0 0 0-4.374-7.655 16.55 16.55 0 0 0-8.554-4.474 16.642 16.642 0 0 0-9.615 1.044A16.462 16.462 0 0 0 4.284 9.2a16.24 16.24 0 0 0-2.597 9.232 16.252 16.252 0 0 0 3.07 9.088 16.485 16.485 0 0 0 7.684 5.822 16.645 16.645 0 0 0 8.856.728.855.855 0 0 1 .996.622.787.787 0 0 1-.604.97c-1.16.225-2.341.339-3.525.338Z"></path>
+                    </svg>
+                    <h4>Find inspiration for your next trip</h4>
+                    <p>Browse vacation homes, cabins, beach houses, condos, houseboats—and everything in between</p>
+                </div>
+                <div class="listItem">
+                    <svg class="h40 w40" width="32" height="32" viewBox="0 0 32 32">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.32 1a7.72 7.72 0 1 0 0 15.44 7.72 7.72 0 0 0 0-15.44ZM8.6 8.72a5.72 5.72 0 1 1 11.44 0 5.72 5.72 0 0 1-11.44 0Z"></path>
+                        <path d="M9.955 18.456c1.346.264 2.864.464 4.365.464v2c-1.669 0-3.321-.221-4.75-.5-2.062-.405-4.146.643-4.787 2.46L3.6 26.228c-.213.604.079 1.139.553 1.294C6.072 28.15 9.549 29 14.32 29c4.77 0 8.248-.85 10.166-1.478a.92.92 0 0 0 .624-.882h1.996c-.009 1.206-.71 2.361-1.998 2.783C23.018 30.107 19.33 31 14.32 31c-5.01 0-8.698-.893-10.788-1.577-1.673-.548-2.356-2.334-1.817-3.86l1.182-3.348c1.028-2.913 4.198-4.32 7.058-3.759Z"></path>
+                        <path d="m22.209 25.863 8.544-9.764-1.506-1.318-7.136 8.156-3.724-3.724-1.414 1.414 5.236 5.236Z"></path>
+                    </svg>
+                    <h4>Discover millions of homes</h4>
+                    <p>Find and compare unique vacation homes from thousands of trusted providers worldwide</p>
+                </div>
+                <div class="listItem">
+                    <svg class="h40 w40" width="32" height="32" viewBox="0 0 32 32">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.535 1.582a2.037 2.037 0 0 0-2.181 0L1.946 8.816A2.037 2.037 0 0 0 1 10.536v15.39c0 1.125.912 2.037 2.037 2.037h15.809c.72.617 1.469 1.232 2.226 1.85a1 1 0 0 0 1.263 0c2.224-1.813 4.371-3.607 5.956-5.486C29.883 22.439 31 20.36 31 17.97c0-2.416-1.31-4.26-3.111-5.057v-2.377c0-.698-.357-1.347-.946-1.72L15.535 1.582ZM25.89 12.48v-1.945a.037.037 0 0 0-.017-.031L14.464 3.27a.037.037 0 0 0-.04 0L3.018 10.505a.037.037 0 0 0-.017.031v15.39c0 .02.017.037.037.037h6.26v-9.37a1 1 0 0 1 1-1h2.587c.656-1.512 1.928-2.572 3.428-2.955 1.841-.47 3.878.106 5.392 1.831 1.188-1.354 2.7-2 4.185-1.988Zm-13.47 5.112h-1.123v8.37h5.35a23.826 23.826 0 0 1-1.53-1.636c-1.592-1.888-2.709-3.967-2.709-6.357 0-.127.004-.253.011-.377Zm1.988.377c0-1.87 1.113-3.065 2.4-3.394 1.263-.323 2.901.143 4.03 2.11a1 1 0 0 0 1.734 0c1.128-1.966 2.767-2.433 4.029-2.11 1.287.329 2.4 1.523 2.4 3.394 0 1.727-.798 3.36-2.237 5.067-1.31 1.552-3.073 3.077-5.06 4.708-1.986-1.631-3.75-3.156-5.058-4.708-1.44-1.706-2.238-3.34-2.238-5.067Z"></path>
+                    </svg>
+                    <h4>Book the perfect rental</h4>
+                    <p>HomeToGo makes it easy to book the right vacation home for any trip, no matter your budget</p>
+                </div>
+            </div>
+        </div>
+        <h3>By the ocean</h3>
+        <div class="itemContainer5"></div>
+        <h3>Wander</h3>
+        <div class="itemContainer6"></div>
+    </div>
+</section>
+
+<footer>
+    <div class="footerItem">
+        <div class="footerSocial">
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-facebook-messenger"></i></a>
+            <a href=""><i class="fa-brands fa-discord"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <div class="footerNav">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Terms Of Use</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 DreamDwellings. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+<script src="/web/js/SigninLogin.js"></script>
+<script src="/web/js/Navbar.js"></script>
+<script src="/web/js/House.js"></script>
+</body>
+</html>

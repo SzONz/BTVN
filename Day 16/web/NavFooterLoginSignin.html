@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/web/style/navfootStyle.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins&display=swap');
+        </style>
+    <script src="https://kit.fontawesome.com/10d2bd830d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/web/style/SigninLoginStyle.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    
+    <nav>
+        <div class="navbar">
+            <a href="/web/html/Home.html" class="button"><button>Home</button></a>
+            <a href="/web/html/House.html" class="button"><button>Rent</button></a>
+            <a href="/web/html/Wishlist.html" class="button"><button>Wishlist</button></a>
+            <button class="account"><div class="navIcon"><i class="fa-regular fa-user"></i></div><div class="navText"></div>
+                <div class="accountDrop">
+                    <div class="accountPP">
+                        <div class="accountIMG"><i class="fa-regular fa-user"></i></div>
+                        <h5 class="accountDropText"></h5>
+                    </div>
+                    <div class="accountContainer">
+                        <form action="">
+                            <input type="button" value="My Profile">
+                            <input type="button" value="Settings">
+                            <input type="button" value="Log Out" id="logoutButton">
+                        </form>
+                    </div>
+                </div>
+            </button>
+            <button class="button" id="loginButton">Login</button>
+            <button class="button" id="signinButton">Sign in</button>
+        </div>
+    </nav>
+    
+    <div class="popupLogin" id="login">
+        <div class="closeButton">&times;</div>
+        <div class="form">
+            <h2>Login</h2>
+            <form action="">
+                <div class="formItem">
+                    <input type="text" id="emailLogin" placeholder="Email">
+                    <p id="emailWarningLogin">Please enter a valid email</p>
+                </div>
+                <div class="formItem">
+                    <input type="password" id="passwordLogin" placeholder="Password">
+                    <p id="passwordWarningLogin">Password incorrect</p>
+                </div>
+                <div class="formItem">
+                    <input type="checkbox">
+                    <label for="remember-me">Remember me</label>
+                </div>
+                <div class="formItem">
+                    <input type="submit" value="Login">
+                </div>
+                <div class="formItem">
+                    <a href="">Forgot password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="popupSignin" id="register">
+        <div class="closeButton">&times;</div>
+        <div class="form">
+            <h2>Sign in</h2>
+            <form action="">
+                <div class="formItem">
+                    <input type="text" id="nameSignin" placeholder="Username">
+                    <p id="nameWarningSigning">Please enter your name</p>
+                </div>
+                <div class="formItem">
+                    <input type="text" id="emailSignin" placeholder="Email">
+                    <p id="emailWarningSigning">Please enter a valid email</p>
+                </div>
+                <div class="formItem">
+                    <input type="text" id="numberSignin" placeholder="Phone Number">
+                    <p id="phoneWarningSigning">Please enter your phone number</p>
+                </div>
+                <div class="formItem">
+                    <input type="password" id="passwordSignin" placeholder="Password">
+                    <p id="passwordWarningSigning">Please enter a valid password</p>
+                </div>
+                <div class="formItem">
+                    <input type="checkbox" id="TOSScheck">
+                    <label for="TOSS">I accept the<a href="/web/html/TOS.html">Term of Use</a></label>
+                    <p id="tosWarningSigning">You must accept the Terms of Use</p>
+                </div>
+                <div class="formItem">
+                    <input type="submit" value="Signin">
+                </div>
+            </form>
+            <div class="formItem">
+                <a href="">Forgot password?</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footerItem">
+            <div class="footerSocial">
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-brands fa-facebook-messenger"></i></a>
+                <a href=""><i class="fa-brands fa-discord"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Terms Of Use</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 DreamDwellings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/web/js/SigninLogin.js"></script>
+    <script src="/web/js/Navbar.js"></script>
+</body>
+</html>

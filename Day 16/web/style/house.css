@@ -1,0 +1,918 @@
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+.searchSection {
+    max-width: 1200px;
+    height: auto;
+    position: absolute;
+    margin: 0 auto;
+    top: 70%;
+}
+
+
+.search{
+    background-color: white;
+    width: fit-content;
+    height: 60px;
+    display: flex;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+.address{
+    width: 740px;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.address:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.address .addressIcon{
+    font-size: 20px;
+}
+
+.address .addressSearch{
+    width: 700px;
+    height: 100%;
+    line-height: 40px;
+}
+
+.address .addressSearch form{
+    margin-left: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.address .addressSearch form input{
+    border: none;
+    font-size: 15px;
+    background: none;
+    width: 100%;
+    height: auto;
+    height: 100%;
+}
+
+.address .addressSearch form input:focus{
+    outline: none;
+}
+
+
+.rentTime{
+    width: 250px;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    font-family: sans-serif;
+    transition: 0.5s;
+}
+.rentTime:hover{
+    border: 1px solid #D2B48C
+}
+
+.rentTime .rentTimeIcon{
+    font-size: 20px;
+}
+
+.rentTime .rentTimeText{
+    margin-left: 5px;
+}
+
+.filter{
+    width: 75px;
+    height: 50px;
+    display: flex;
+    line-height: 50px;
+    padding: 5px;
+}
+.filter:hover{
+    background-color: rgba(0, 0, 0, 0.05)
+}
+
+.filter .filterIcon{
+    font-size: 25px;
+}
+
+.filter .filterText{
+    margin-left: 5px;
+    font-family: sans-serif;
+}
+
+.filterPopup{
+    position: fixed;
+    width: 500px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    transform: translate(-50%,-50%) scale(1.25);
+    z-index: 3;
+    visibility: hidden;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: white;
+    transition: top 0ms ease-in-out 200ms, 
+                visibility 200ms ease-in-out 0ms, 
+                transform 200ms ease-in-out 0ms;
+}
+
+.filterPopup.working{
+    top: 50%;
+    z-index: 5;
+    visibility: visible; 
+    transform: translate(-50%,-50%) scale(1);
+    transition: top 0ms ease-in-out 0ms, 
+                visibility 200ms ease-in-out 0ms, 
+                transform 200ms ease-in-out 0ms;
+}
+
+.filterCloseButton{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: gray;
+    color: white;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.guests-and-rooms{
+    height: auto;
+}
+
+.filterTitle h3{
+    width: 100%;
+    display: block;
+    font-size: 15px;
+    font-family: sans-serif;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+    padding: 5px;
+}
+
+.GARfilter{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.GARitem{
+    width: 200px;
+    height: 80px;
+    margin: 10px 10px;
+    display: flex;
+}
+
+.GARitem .GARIcon{
+    width: 30px;
+    height: 100%;
+    font-size: 25px;
+    text-align: center;
+    line-height: 60px;    
+}
+
+.GARitem .GARText{
+    height: 100%;
+    width: 100px;
+    padding: 10px;
+    font-family: sans-serif;
+}
+.GARitem .GARText h4{
+    font-size: 14px;
+}
+
+.GARitem .GARText p{
+    font-size: 10px;
+}
+
+.Add{
+    width: 80px;
+    height: 50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.Add i{
+    height: 27px;
+    border: 2px solid #D2B48C;
+    color: #D2B48C;
+    padding: 2px 4px;
+    margin: 10px 0;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Add i:hover{
+    background-color: rgba(0, 0, 0, 0.05)
+}
+
+.Add p{
+    margin: 0px 5px;
+}
+
+.rattings form{
+    width: 100%;
+    height: 20px;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.rattings form label{
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+.rattings form label span{
+    margin-left: 5px;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+
+.container input:checked ~ .checkmark {
+    background-color: #D2B48C;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+
+.homeIMG{
+    width: 100%;
+    min-width: 1088px;
+    min-height: 415px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.homeIMG img{
+    width: 100%;
+    height: 415px;
+    position: absolute;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+.navbar{
+    position: absolute;
+    z-index: 2;
+    background-color: transparent;
+    animation: fadeIn 3s;
+    transition: 0.5s;
+}
+nav.sticky .navbar{
+    background-color: black;
+}
+.navbar:hover{
+    background-color: black;
+}
+
+.overlayIMG{
+    position: absolute;
+    width: 100%;
+    min-height: 415px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 150px;
+}
+
+.content{
+    width: fit-content;
+    height: 70%;
+    position: absolute;
+    color: white;
+    font-family: sans-serif;
+    animation: fadeIn 3s;
+}
+
+.content h1{
+    font-size: 50px;
+    border: none;
+}
+
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+.content button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #D2B48C;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.content button span{
+    background-color: #D2B48C;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.content button:hover span{
+    width: 100%;
+}
+
+.content button:hover{
+    border: none;
+}
+
+.category{
+    height: auto;
+    width: 100%;
+    padding: 100px 100px;
+}
+
+.category h3{
+    font-size: 25px;
+    margin: 50px 0px 20px 0px;
+}
+
+.itemContainer1,
+.itemContainer2,
+.itemContainer3,
+.itemContainer4{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.itemContainer1 .item{
+    height: 170px;
+    width: 260px;
+    border-radius: 10px;
+    transition: 0.3s;
+    position: relative;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.itemContainer1 .item:hover{
+    border: 3px solid #D2B48C;
+    padding: 10px;
+}
+
+.itemContainer1 .item img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.itemContainer1 .item .itemText{
+    background-color: #D2B48C;
+    width: fit-content;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    border-bottom-left-radius: 10px;
+    transition: 0.3s;
+}
+
+.itemContainer1 .item:hover .itemText{
+    bottom: 5px;
+}
+
+.itemContainer3 .item{
+    width: 300px;
+    height: 204px;
+    margin-right: 20px;
+    border-radius: 10px;
+    transition: 0.5s;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: 20px;   
+    position: relative;
+}
+
+.itemContainer3 #sweden{
+    width: 420px;
+}
+.itemContainer3 #spain{
+    width: 300px;
+}
+
+.itemContainer3 #netherlands{
+    width: 360px;
+}
+
+.itemContainer3 #switzerland{
+    width: 390px;
+}
+
+.itemContainer3 #croatia{
+    width: 390px;
+}
+
+.itemContainer3 .item img{
+    width: 100%;
+    height: 100%;
+}
+
+.itemContainer3 .item .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    padding: 20px;
+    display: flex;
+    align-items: end;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.itemContainer3 .item:hover .content{
+    background-color: transparent;
+}
+
+.help {
+    margin-top: 100px;
+    width: 100%;
+    height: auto;
+    display: flex;  
+}
+
+.help .helpIMG{
+    width: 800px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.help .helpIMG img{
+    width: 100%;
+    height: 100%;
+}
+
+.help .helpText{
+    margin-right: 60px;
+    width: 300px;
+    height: 100px;
+}
+
+.help .helpText button{
+    margin: 30px 0px;
+    font-size: 17px;
+    font-weight: 500;
+    background-color: #D2B48C;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+
+.itemContainer4 .item{
+    height: 180px;
+    width: 260px;
+    margin-right: 5px;
+    border-radius: 10px;
+    transition: 0.3s;
+    position: relative;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    color: white;
+    overflow: hidden;
+}
+
+.itemContainer4 .item img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+.itemContainer4 .item:hover img{
+    transform: scale(1.1);
+}
+
+.itemContainer4 .item .content{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    padding: 10px 20px;
+    display: flex;
+    align-items: end;
+    justify-content: start;
+}
+
+.itemContainer4 .item .content p{
+    margin: 0;
+    font-weight: 600;
+}
+
+.itemContainer2 .item{
+    height: 280px;
+    width: 250px;
+    border-radius: 10px;
+    transition: 0.5s;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.itemContainer2 .item:hover{
+    transform: scale(1.1);
+}
+
+.itemContainer2 .item img{
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+    border-radius: 0px;
+}
+
+.itemContainer2 .item:hover img{
+    transform: scale(1);
+}
+
+.itemContainer2 .item .itemText{
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    height: 30%;
+    line-height: 35px;
+    padding: 20px;
+}
+
+.itemContainer2 .item .itemText p{
+    color: black;
+}
+
+.provider-list{
+    width: 100%;
+    height: auto;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    padding: 30px 20px;
+    margin-top: 50px;
+    border-radius: 20px;
+    min-width: 260px;
+}
+
+.provider-list .list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.provider-list h3{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+.provider-list .list .listItem{
+    width: 260px;
+    height: 200px;
+}
+
+.provider-list .list .listItem svg{
+    margin: 30px 0px 15px 0px;
+    width: 45px;
+    height: 45px;
+}
+
+.provider-list .list .listItem h4{
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.provider-list .list .listItem p{
+    font-size: 14px;
+}
+
+
+.itemContainer5{
+    height: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.itemContainer5 .item{
+    height: 319px;
+    cursor: default;
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    width: 290px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.15);
+}
+
+.itemContainer5 .item .itemIMG{
+    width: 100%;
+    height: 193px;
+}
+
+.itemContainer5 .item .itemIMG img{
+    width: 100%;
+    height: 100%;
+}
+
+.itemContainer5 .item .itemDesc{
+    width: 100%;
+    padding: 10px;
+    color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.itemContainer5 .item .itemDesc span{
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.itemContainer5 .item .itemDesc h5{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 3px 0px;
+    font-size: 13px;
+}
+
+.itemContainer5 .item .itemDesc p{
+    font-size: 12px;
+    font-weight: 600;
+    color: #D2B48C;
+    display: flex;
+}
+
+.itemContainer5 .item .itemDesc button{
+    border: 2px solid #D2B48C;
+    color: #D2B48C;
+    margin-top: 10px;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.itemContainer5 .item .itemDesc button:hover{
+    background-color: #D2B48C;
+    color: white;
+}
+
+.itemContainer5 .item .itemPrice{
+    position: absolute;
+    color: black;
+    width: fit-content;
+    height: auto;
+    top: 170px;
+    left: 10px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.15);
+}
+
+.itemContainer5 .item .itemPrice p{
+    font-weight: 600;
+}
+
+.itemContainer5 .item .itemPrice p span{
+    font-weight: 500;
+    font-size: 10px;
+}
+
+.itemContainer5 .item .wishlsitButton{
+    background-color: white;
+    position: absolute;
+    color: black;
+    top: 10px;
+    margin-left: 250px;
+    padding: 5px 6px;
+    border-radius: 50%;
+    display: none;
+    animation: fadeIn 0.3s;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.itemContainer5 .item:hover .wishlsitButton{
+    display: block;
+}
+
+.itemContainer5 .item:hover .wishlsitButton.wishlisted{
+    background-color: white;
+    color: red;
+}
+
+.itemContainer6{
+    height: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.itemContainer6 .item{
+    height: 319px;
+    cursor: default;
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    width: 290px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.15);
+}
+
+.itemContainer6 .item .itemIMG{
+    width: 100%;
+    height: 193px;
+}
+
+.itemContainer6 .item .itemIMG img{
+    width: 100%;
+    height: 100%;
+}
+
+.itemContainer6 .item .itemDesc{
+    width: 100%;
+    padding: 10px;
+    color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.itemContainer6 .item .itemDesc span{
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.itemContainer6 .item .itemDesc h5{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 3px 0px;
+    font-size: 13px;
+}
+
+.itemContainer6 .item .itemDesc p{
+    font-size: 12px;
+    font-weight: 600;
+    color: #D2B48C;
+    display: flex;
+}
+
+.itemContainer6 .item .itemDesc button{
+    border: 2px solid #D2B48C;
+    color: #D2B48C;
+    margin-top: 10px;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.itemContainer6 .item .itemDesc button:hover{
+    background-color: #D2B48C;
+    color: white;
+}
+
+.itemContainer6 .item .itemPrice{
+    position: absolute;
+    color: black;
+    width: fit-content;
+    height: auto;
+    top: 170px;
+    left: 10px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.15);
+}
+
+.itemContainer6 .item .itemPrice p{
+    font-weight: 600;
+}
+
+.itemContainer6 .item .itemPrice p span{
+    font-weight: 500;
+    font-size: 10px;
+}
+
+.itemContainer6 .item .wishlsitButton{
+    background-color: white;
+    position: absolute;
+    color: black;
+    top: 10px;
+    margin-left: 250px;
+    padding: 5px 6px;
+    border-radius: 50%;
+    display: none;
+    animation: fadeIn 0.3s;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.itemContainer6 .item:hover .wishlsitButton{
+    display: block;
+}
+
+.itemContainer6 .item:hover .wishlsitButton.wishlisted{
+    background-color: white;
+    color: red;
+}
+

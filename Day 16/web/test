@@ -1,0 +1,17 @@
+            <!-- <div class="item">
+                <div class="itemIMG">
+                    <img src="/web/img/rent1.jpg" alt="">
+                </div>
+                <div class="wishlsitButton" onclick="wishlisted(this)">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="itemPrice">
+                    <p><span>from </span>$1,174 <span>per night</span></p>
+                </div>
+                <div class="itemDesc">
+                    <span>465 m² House</span>
+                    <h5>GORGEOUS OCEAN FRONT 5 BEDROOM WITH POOL, AC, GAME ROOM AND SLEEPS 14</h5>
+                    <p>4.8/5</p>
+                    <button class="deal">View Deal</button>
+                </div>
+            </div> -->
