@@ -27,8 +27,9 @@ if (wishlistData) {
             const itemPricePerNight = parseFloat(item.price.replace("$", ""));
             const newNights = currentNights + 1;
             const totalPrice = newNights * itemPricePerNight;
-            itemCurrentPrice.textContent = newNights + " nights: $" + totalPrice.toFixed(2);
+            itemCurrentPrice.textContent = newNights + " nights: $" + totalPrice;
             itemCancel.style.display = "inline";
+            itemConfirm.style.display = "inline";
         });
 
         const itemCancel = document.createElement("button");
@@ -38,6 +39,16 @@ if (wishlistData) {
         itemCancel.addEventListener("click", function() {
             itemCurrentPrice.textContent = "1 night: " + item.price;
             itemCancel.style.display = "none";
+            itemConfirm.style.display = "none";
+        });
+
+        const itemConfirm = document.createElement("button");
+        itemConfirm.textContent = "Confirm";
+        itemConfirm.classList.add("confirm");
+        itemConfirm.style.display = "none";
+        itemConfirm.addEventListener("click", function() {
+            itemCancel.style.display = "none";
+            itemConfirm.style.display = "none";
         });
 
         const itemWishlist = document.createElement("div");
@@ -57,12 +68,14 @@ if (wishlistData) {
             container.remove();
         }
 
+
         container.appendChild(itemImage);
         container.appendChild(itemName);
         container.appendChild(itemPrice);
         container.appendChild(itemCurrentPrice);
         container.appendChild(itemAdd);
         container.appendChild(itemCancel);
+        container.appendChild(itemConfirm);
         container.appendChild(itemWishlist);
 
         document.querySelector(".listContainer").appendChild(container);

@@ -419,13 +419,19 @@ nav.sticky .navbar{
 
 .itemContainer1,
 .itemContainer2,
-.itemContainer3,
 .itemContainer4{
     width: 100%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.itemContainer3{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
@@ -777,7 +783,7 @@ nav.sticky .navbar{
     font-size: 10px;
 }
 
-.itemContainer5 .item .wishlsitButton{
+.itemContainer5 .item .wishlistButton{
     background-color: white;
     position: absolute;
     color: black;
@@ -791,11 +797,11 @@ nav.sticky .navbar{
     transition: 0.3s;
 }
 
-.itemContainer5 .item:hover .wishlsitButton{
+.itemContainer5 .item:hover .wishlistButton{
     display: block;
 }
 
-.itemContainer5 .item:hover .wishlsitButton.wishlisted{
+.itemContainer5 .item:hover .wishlistButton.wishlisted{
     background-color: white;
     color: red;
 }
@@ -893,7 +899,7 @@ nav.sticky .navbar{
     font-size: 10px;
 }
 
-.itemContainer6 .item .wishlsitButton{
+.itemContainer6 .item .wishlistButton{
     background-color: white;
     position: absolute;
     color: black;
@@ -907,11 +913,11 @@ nav.sticky .navbar{
     transition: 0.3s;
 }
 
-.itemContainer6 .item:hover .wishlsitButton{
+.itemContainer6 .item:hover .wishlistButton{
     display: block;
 }
 
-.itemContainer6 .item:hover .wishlsitButton.wishlisted{
+.itemContainer6 .item:hover .wishlistButton.wishlisted{
     background-color: white;
     color: red;
 }

@@ -56,7 +56,7 @@ let ocean = {
     data:[
         {
             name: "GORGEOUS OCEAN FRONT 5 BEDROOM WITH POOL, AC, GAME ROOM AND SLEEPS 14",
-            price: "$1,172",
+            price: "$1172",
             image: "/web/img/rent1.jpg",
             star: "4.8",
             size: "465",
@@ -138,10 +138,21 @@ for (let item of ocean.data){
     container.appendChild(image)
 
     let wishlist = document.createElement("div")
-    wishlist.classList.add("wishlsitButton")
+    wishlist.classList.add("wishlistButton");
+
+    const wishlistData = localStorage.getItem("wishlist");
+    if (wishlistData) {
+        const wishlistItems = JSON.parse(wishlistData);
+        const index = wishlistItems.findIndex(wish => wish.name === item.name);
+        if (index !== -1) {
+            wishlist.classList.add("wishlisted");
+        }
+    }
+
     wishlist.addEventListener("click", function() {
         wishlisted(this);
     });
+
     function wishlisted(button) {
         button.classList.toggle("wishlisted");
         const itemName = item.name;
@@ -153,24 +164,19 @@ for (let item of ocean.data){
         } else {
             wishlist = JSON.parse(wishlist);
         }
-    
+
         const index = wishlist.findIndex(wish => wish.name === itemName);
         if (index !== -1) {
             wishlist.splice(index, 1);
         } else {
-            wishlist.push({ name: itemName, image: itemImage, price: itemPrice }); // Add item to wishlist
+            wishlist.push({ name: itemName, image: itemImage, price: itemPrice });
         }
         localStorage.setItem("wishlist", JSON.stringify(wishlist));
     }
-    const wishlistButtons = document.querySelectorAll(".wishlistButton");
-    wishlistButtons.forEach((button, index) => {
-        button.addEventListener("click", function() {
-            const item = ocean.data[index];
-            wishlisted(this, item);
-        });
-    });
+
     wishlist.innerHTML = '<i class="fa-solid fa-heart"></i>';
     container.appendChild(wishlist);
+
 
     let price = document.createElement("div");
     price.classList.add("itemPrice")
@@ -265,10 +271,21 @@ for (let item of wander.data){
     container.appendChild(image)
 
     let wishlist = document.createElement("div")
-    wishlist.classList.add("wishlsitButton")
+    wishlist.classList.add("wishlistButton");
+
+    const wishlistData = localStorage.getItem("wishlist");
+    if (wishlistData) {
+        const wishlistItems = JSON.parse(wishlistData);
+        const index = wishlistItems.findIndex(wish => wish.name === item.name);
+        if (index !== -1) {
+            wishlist.classList.add("wishlisted");
+        }
+    }
+
     wishlist.addEventListener("click", function() {
         wishlisted(this);
     });
+
     function wishlisted(button) {
         button.classList.toggle("wishlisted");
         const itemName = item.name;
@@ -280,22 +297,16 @@ for (let item of wander.data){
         } else {
             wishlist = JSON.parse(wishlist);
         }
-    
+
         const index = wishlist.findIndex(wish => wish.name === itemName);
         if (index !== -1) {
             wishlist.splice(index, 1);
         } else {
-            wishlist.push({ name: itemName, image: itemImage, price: itemPrice }); // Add item to wishlist
+            wishlist.push({ name: itemName, image: itemImage, price: itemPrice });
         }
         localStorage.setItem("wishlist", JSON.stringify(wishlist));
     }
-    const wishlistButtons = document.querySelectorAll(".wishlistButton");
-    wishlistButtons.forEach((button, index) => {
-        button.addEventListener("click", function() {
-            const item = ocean.data[index];
-            wishlisted(this, item);
-        });
-    });
+
     wishlist.innerHTML = '<i class="fa-solid fa-heart"></i>';
     container.appendChild(wishlist);
 
